@@ -19,6 +19,11 @@ To practice basic Typescript in combination with REACT.js to get a better unders
 > npx tsc
 ```
 
+
+```
+> npx create-react-app my-app --template typescript
+```
+
 - Initial package.json & install dependencies (localhost: 3000):
 ```
 > npx create-react-app <project name>
@@ -57,4 +62,5 @@ To practice basic Typescript in combination with REACT.js to get a better unders
 ## Resources & Helpful Hints:
 - [Typescript](https://www.typescriptlang.org/docs/) documentation
     - Javascript file will be generated from Typescript file
+- [React](https://create-react-app.dev/docs/adding-typescript/).js Typscript application. 
 

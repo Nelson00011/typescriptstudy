@@ -1,29 +1,31 @@
 import { useState } from 'react';
 
+import NewTodo from './components/NewTodo';
 import Todos from './components/Todos';
 import Todo from './models/todo';
-import NewTodo from './components/NewTodo';
-
-import './App.css';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   const addTodoHandler = (todoText: string) => {
-    const newTodo = new Todo(todoText)
+    const newTodo = new Todo(todoText);
 
-    setTodos((prevTodos)=> {
+    setTodos((prevTodos) => {
       return prevTodos.concat(newTodo);
-    })
-
+    });
   };
+
+  const removeTodoHandler = (todoId: string) => {
+    setTodos((prevTodos)=> {
+      return prevTodos.filter(todo=> todo.id !== todoId)
+    })
+  };
+
 
   return (
     <div>
-      <header>List Below: NavBar will go Above</header>
-      <NewTodo onAddTodo={addTodoHandler}/>
-      <Todos items={todos} />
-      
+      <NewTodo onAddTodo={addTodoHandler} />
+      <Todos items={todos} onRemoveTodo={removeTodoHandler}/>
     </div>
   );
 }

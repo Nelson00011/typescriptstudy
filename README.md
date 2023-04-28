@@ -1,4 +1,4 @@
-# typescriptstudy
+# Typescript Study
 To practice basic Typescript in combination with REACT. js to get a better understanding of basic Typescript coding. 
 
 ## Run Code (Environment)
@@ -10,6 +10,12 @@ To practice basic Typescript in combination with REACT. js to get a better under
 > npm -v
 > git --version
 > npm list react-router-dom
+```
+
+- Install typescript & run application (add -g to make it global):
+```
+> npm install typescript
+> npx tsc
 ```
 
 - Initial package.json & install dependencies (localhost: 3000):

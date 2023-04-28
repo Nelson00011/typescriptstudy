@@ -19,7 +19,7 @@ To practice basic Typescript in combination with REACT.js to get a better unders
 > npx tsc
 ```
 
-
+- 
 ```
 > npx create-react-app my-app --template typescript
 ```

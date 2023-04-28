@@ -1,5 +1,5 @@
 # Typescript Study
-To practice basic Typescript in combination with REACT. js to get a better understanding of basic Typescript coding. 
+To practice basic Typescript in combination with REACT.js to get a better understanding of basic Typescript coding. 
 
 ## Run Code (Environment)
 ### Front-End Helpful Hints (Node.js)
@@ -15,6 +15,7 @@ To practice basic Typescript in combination with REACT. js to get a better under
 - Install typescript & run application (add -g to make it global):
 ```
 > npm install typescript
+> npx tsc with-typescript.ts
 > npx tsc
 ```
 
@@ -55,4 +56,5 @@ To practice basic Typescript in combination with REACT. js to get a better under
 
 ## Resources & Helpful Hints:
 - [Typescript](https://www.typescriptlang.org/docs/) documentation
+    - Javascript file will be generated from Typescript file
 

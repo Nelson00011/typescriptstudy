@@ -19,16 +19,11 @@ To practice basic Typescript in combination with REACT.js to get a better unders
 > npx tsc
 ```
 
-- 
+- Initial React.js Typescript & install dependencies (localhost: 3000):
 ```
-> npx create-react-app my-app --template typescript
-```
-
-- Initial package.json & install dependencies (localhost: 3000):
-```
-> npx create-react-app <project name>
+> npx create-react-app <project name> --template typescript
 > cd <project name>
-> npm install --save react-router-dom
+<!-- > npm install --save react-router-dom -->
 ```
 - Test front-end once pages are generated (ctrl-c to exit):
 ```

@@ -82,6 +82,41 @@ function handleEvent<T extends keyof ContactEvents>(
             handler({contactId: 1, oldStatus: 'active', newStatus: 'inactive'})
         }
     }
-    
+
 handleEvent("statusChanged", event => event)
 
+//Always check the syntax (type checking super descriptive)
+//Record is flexible type definition.  
+let x: Record<string, string | number | boolean> = { name: "John Doe"}
+x.number = 1234
+
+interface Query {
+    sort?: 'asc' | 'desc';
+    matches(val): boolean;
+}
+
+
+
+function searchContacts(contacts: Contact[], query: Record<keyof Contact, Query>) {
+    return contacts.filter(contact => {
+        for (const property of Object.keys(contact) as (keyof Contact)[]) {
+            // get the query object for this property
+            const propertyQuery = query[property];
+            // check to see if it matches
+            if (propertyQuery && propertyQuery.matches(contact[property])) {
+                return true;
+            }
+        }
+
+        return false;
+    })
+}
+
+//TODO
+const filteredContacts = searchContacts(
+    [/* contacts */],
+    {
+        id: { matches: (id) => id === 123 },
+        name: { matches: (name) => name === "Carol Weaver" },
+    }
+); 

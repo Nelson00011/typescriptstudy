@@ -95,7 +95,9 @@ interface Query {
     matches(val): boolean;
 }
 
-
+//TODO update RECORD/PARTIAL/OMIT
+type ContactQuery = Omit<Partial<Record<keyof Contact, Query>>,
+"address" | "status">
 
 function searchContacts(contacts: Contact[], query: Record<keyof Contact, Query>) {
     return contacts.filter(contact => {

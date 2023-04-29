@@ -34,6 +34,7 @@ Create a todo's list using React.ts (Typescript). Meant to improve my understand
 
 ## Resources & Helpful Hints:
 - [Typescript](https://www.typescriptlang.org/docs/) documentation
+    - [Context](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/) for typscript
     - Javascript file will be generated from Typescript file
 - [React](https://create-react-app.dev/docs/adding-typescript/).js Typscript application. 
 

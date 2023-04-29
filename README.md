@@ -1,5 +1,6 @@
 <h1 align="center">Typescript Study</h1>
 
+<!-- Image Here? -->
 ## Description
 
 **Task Manager** is a Typescript React application, designed to allows users to create Todo lists of various tasks.  User can track their tasks via status, date, or priority via a dashboard. Meant to improve my understanding of basic Typescript.
@@ -18,7 +19,7 @@ Future Direction (Options):
 
 ## Screen Shots 
 
-- TODO: optional video? 
+<!-- - TODO: optional video?  -->
 
 
 ## Run Code (Environment)

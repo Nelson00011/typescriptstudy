@@ -95,15 +95,30 @@ interface Query {
     matches(val): boolean;
 }
 
-//TODO update RECORD/PARTIAL/OMIT
-type ContactQuery = Omit<Partial<Record<keyof Contact, Query>>,
-"address" | "status">
+//TODO update RECORD/PARTIAL/OMIT/PICK
+// type ContactQuery = Partial<
+// Pick<
+// Record<
+// keyof Contact, Query>,
+// "id" | "name">
+// >
+
+
+
+//Record type for simple refrences
+type RequiredContactQuery = Required<ContactQuery>
+
+//Mapped 
+type ContactQuery = {
+    [TProp in keyof Contact]?: Query<Contact[Prop]>
+}
+
 
 function searchContacts(contacts: Contact[], query: Record<keyof Contact, Query>) {
     return contacts.filter(contact => {
         for (const property of Object.keys(contact) as (keyof Contact)[]) {
             // get the query object for this property
-            const propertyQuery = query[property];
+            const propertyQuery = query[property] as Query<Contact[keyof Contact]>;
             // check to see if it matches
             if (propertyQuery && propertyQuery.matches(contact[property])) {
                 return true;
@@ -122,3 +137,5 @@ const filteredContacts = searchContacts(
         name: { matches: (name) => name === "Carol Weaver" },
     }
 ); 
+
+//Mapped Type definition:

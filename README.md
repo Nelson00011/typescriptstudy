@@ -52,12 +52,18 @@ Future Direction (Options):
 ```
 > npm run start
 ```
+- Include Decorator (see resources):
+```
+> npm install reflect-metadata
+```
+
 
 
 
 ## Resources & Helpful Hints:
 - [Typescript](https://www.typescriptlang.org/docs/) documentation
     - [Context](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/context/) for typscript
+    - [Metadata](https://www.npmjs.com/package/reflect-metadata) Reflection API.
     - Javascript file will be generated from Typescript file
 - [React](https://create-react-app.dev/docs/adding-typescript/).js Typscript application. 
 

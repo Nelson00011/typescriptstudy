@@ -66,3 +66,25 @@ const updatedArray = insertAtBeginning(demoArray, -1);  // [-1, 1, 2 ,3]
 const stringArray = insertAtBeginning(['a','b', 'c'], 'd')
 
 // updatedArray[0].split("");
+
+//tuple
+let aTuple: [string, number] = ["Manny", 34];
+
+//Enum
+enum Codes {first= 1, second = 2};
+//Any - a good catch all
+let firstName: any = "John Doe";
+//Void - nothing is retunred. 
+const warning = ():void => {
+    console.log("Return String")
+}
+
+//REACT helpful hints props
+const Info = (props {message:string}):any =>{
+    return (
+        <p>This is the Info</p>
+    );
+}
+
+export default Info;
+/// END OF REACT Componenent

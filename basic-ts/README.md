@@ -1,4 +1,4 @@
-<h1 align="center">Typescript Study</h1>
+<h1 align="center">Typescript Study Basics</h1>
 
 <!-- Image Here? -->
 ## Description
